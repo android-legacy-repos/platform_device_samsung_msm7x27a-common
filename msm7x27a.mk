@@ -36,8 +36,13 @@ PRODUCT_PACKAGES += \
 
 ## Bluetooth
 PRODUCT_PACKAGES += \
+    Bluetooth2 \
+    bluetoothd \
+    libbluetoothd \
     hciconfig \
-    hcitool
+    hcitool \
+    hciattach \
+    javax.btobex
 
 ## Audio
 PRODUCT_PACKAGES += \
@@ -54,10 +59,9 @@ PRODUCT_PACKAGES += \
     gps.msm7x27a
 
 ## FM radio
-#PRODUCT_PACKAGES += \
-#    qcom.fmradio \
-#    libqcomfm_jni \
-#    FM2
+PRODUCT_PACKAGES += \
+    qcom.fmradio \
+    libqcomfm_jni
 
 ## Charger
 PRODUCT_PACKAGES += \
@@ -67,6 +71,7 @@ PRODUCT_PACKAGES += \
 ## Permissions
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    frameworks/base/data/etc/com.stericsson.hardware.fm.receiver.xml:system/etc/permissions/com.stericsson.hardware.fm.receiver.xml \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
