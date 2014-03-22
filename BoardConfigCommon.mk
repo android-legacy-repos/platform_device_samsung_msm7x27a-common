@@ -79,6 +79,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 BOARD_HAVE_BLUETOOTH := true
 
 ## Wi-Fi
+BOARD_WLAN_NO_FWRELOAD := true
 BOARD_WLAN_DEVICE := ath6kl
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
@@ -91,6 +92,8 @@ WIFI_DRIVER_MODULE_AP_ARG := "suspend_mode=3 wow_mode=2 ath6kl_p2p=1 recovery_en
 WIFI_DRIVER_MODULE_NAME := "ath6kl_sdio"
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/ath6kl_sdio.ko"
 WIFI_DRIVER_MODULE_ARG := "suspend_mode=3 wow_mode=2 ath6kl_p2p=1 recovery_enable=1"
+BOARD_HAVE_LEGACY_HOSTAPD := true
+BOARD_HOSTAPD_NO_ENTROPY := true
 
 ## RIL
 BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
