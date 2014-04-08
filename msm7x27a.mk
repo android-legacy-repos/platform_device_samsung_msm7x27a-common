@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
     audio.primary.msm7x27a \
     audio_policy.msm7x27a \
     audio.a2dp.default \
+    audio.usb.default \
     audio_policy.conf \
     libaudioutils
 
@@ -60,6 +61,7 @@ PRODUCT_PACKAGES += \
 
 ## FM radio
 PRODUCT_PACKAGES += \
+    FM2 \
     qcom.fmradio \
     libqcomfm_jni
 

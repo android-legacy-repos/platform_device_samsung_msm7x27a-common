@@ -53,6 +53,10 @@ COMMON_GLOBAL_CFLAGS += -DCAMERA_NO_UNWANTED_MSG
 ## Audio, FM radio
 BOARD_HAVE_QCOM_FM := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED -DHAVE_FM_RADIO
+# Also these are needed for FM... sigh
+TARGET_PROVIDES_LIBAUDIO := true
+TARGET_USES_QCOM_LPA := true
+COMMON_GLOBAL_CFLAGS += -DWITH_QCOM_LPA
 
 ## Webkit
 ENABLE_WEBGL := true
@@ -115,7 +119,6 @@ BOARD_LPM_BOOT_ARGUMENT_VALUE := batt
 
 ## Use device specific modules
 TARGET_PROVIDES_LIBLIGHTS := true
-#TARGET_PROVIDES_LIBAUDIO := true
 
 ## Recovery
 TARGET_RECOVERY_INITRC := device/samsung/msm7x27a-common/recovery/init.rc
